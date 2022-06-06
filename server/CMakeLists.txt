@@ -13,13 +13,10 @@ add_executable(server.exe
 
 target_link_libraries(server.exe PRIVATE
     rpclib::rpc
-    -static-libgcc
-    -static-libstdc++
     -lwsock32
     -lws2_32
-    -pthread
     -static
-    -g
+    # -g
 )
 
 install(TARGETS server.exe DESTINATION bin)

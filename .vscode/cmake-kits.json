@@ -1,15 +1,8 @@
 [
     {
-        "name": "wine32",
+        "name": "mingw32-posix",
         "compilers": {
-            "CC": "winegcc",
-            "CXX": "wineg++"
-        }
-    },
-    {
-        "name": "mingw",
-        "compilers": {
-            "CC": "i686-w64-mingw32-gcc-posix",
+            "C": "i686-w64-mingw32-gcc-posix",
             "CXX": "i686-w64-mingw32-g++-posix"
         }
     }

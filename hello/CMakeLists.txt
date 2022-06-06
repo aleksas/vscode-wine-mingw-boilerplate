@@ -10,9 +10,8 @@ add_executable(hello.exe
     main.cpp)
 
 target_link_libraries(hello.exe PRIVATE
-    -static-libgcc
-    -static-libstdc++
-    -gstabs
+    -static
+    # -gstabs
 )
 
 install(TARGETS hello.exe DESTINATION bin)

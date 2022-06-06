@@ -56,7 +56,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 FROM config as dev
 
 RUN apt update \
-    && apt -y install mingw-w64 mingw-w64-i686-dev mingw-w64-x86-64-dev gcc-multilib g++-multilib build-essential git cmake
+    && apt -y install mingw-w64 mingw-w64-i686-dev mingw-w64-x86-64-dev gdb-mingw-w64 gdb-mingw-w64-target gcc-multilib g++-multilib build-essential git cmake
 
 ARG BUILD_TYPE=Release
 RUN apt -y install gdb
