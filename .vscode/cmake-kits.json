@@ -1,0 +1,16 @@
+[
+    {
+        "name": "wine32",
+        "compilers": {
+            "CC": "winegcc",
+            "CXX": "wineg++"
+        }
+    },
+    {
+        "name": "mingw",
+        "compilers": {
+            "CC": "i686-w64-mingw32-gcc-posix",
+            "CXX": "i686-w64-mingw32-g++-posix"
+        }
+    }
+]

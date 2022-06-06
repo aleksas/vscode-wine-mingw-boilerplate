@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        { 
+            "label": "start_debugger",
+            "command": "/usr/bin/wine",
+            "args": ["Z:/usr/share/win32/gdbserver.exe", "localhost:12345", "Z:\\workspace\\build\\hello\\hello.exe"]
+        }
+    ]
+}

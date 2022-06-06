@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   # Update this to the name of the service you want to work with in your docker-compose.yml file
-  client:
+  server:
     build:
       context: ./
       dockerfile: Dockerfile
@@ -24,9 +24,13 @@ services:
     #   context: .
     #   dockerfile: .devcontainer/Dockerfile
 
+    environment:
+      - DISPLAY=${DISPLAY}
+      
     volumes:
       # Update this to wherever you want VS Code to mount the folder of your project
       - .:/workspace:cached
+      - /tmp/.X11-unix:/tmp/.X11-unix
 
       # Uncomment the next line to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker-compose for details.
       # - /var/run/docker.sock:/var/run/docker.sock 
