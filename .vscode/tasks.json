@@ -4,6 +4,7 @@
         { 
             "label": "start_debugger",
             "command": "/usr/bin/wine",
+            "isBackground": true,
             "args": ["Z:/usr/share/win32/gdbserver.exe", "localhost:12345", "Z:\\workspace\\build\\hello\\hello.exe"]
         }
     ]
