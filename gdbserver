@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/wine Z:/usr/share/win32/gdbserver.exe "$@"

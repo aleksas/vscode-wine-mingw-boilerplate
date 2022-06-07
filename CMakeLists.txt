@@ -1,14 +1,18 @@
 cmake_minimum_required(VERSION 3.5)
-project(rpclib)
+project(hello)
 
-# if (NOT MINGW)
-#     message(STATUS "client")
-#     add_subdirectory(client)
-# endif ()
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_SYSTEM_NAME Windows)
+SET(CMAKE_C_FLAGS -m32)
+SET(CMAKE_CXX_FLAGS -m32)
 
-# if (MINGW)
-    message(STATUS "server")
-    add_subdirectory(server)
-    message(STATUS "hello")
-    add_subdirectory(hello)
-# endif () 
+add_executable(hello.exe
+    src/main.cpp)
+
+target_link_libraries(hello.exe PRIVATE
+    -static
+    -gstabs
+    -g
+)
+
+install(TARGETS hello.exe DESTINATION bin)

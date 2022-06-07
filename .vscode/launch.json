@@ -7,15 +7,17 @@
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
+            "serverLaunchTimeout": 10000,
+            // "miDebuggerServerAddress": "127.0.0.1:3456",
             "miDebuggerPath": "/usr/bin/i686-w64-mingw32-gdb",
-            "miDebuggerArgs": "--eval-command='target select remote 127.0.0.1:3456' ${command:cmake.launchTargetPath}",
-            "debugServerPath": "/usr/bin/wine",
-            "debugServerArgs": "Z:/usr/share/win32/gdbserver.exe localhost:3456 ${command:cmake.launchTargetPath}"
+            "miDebuggerArgs": "--eval-command='target remote 127.0.0.1:3456' ${command:cmake.launchTargetPath}",
+            "debugServerPath": "/usr/bin/gdbserver",
+            "debugServerArgs": "127.0.0.1:3456 ${command:cmake.launchTargetPath}"
         }
     ]
 }
