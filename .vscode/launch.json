@@ -7,17 +7,17 @@
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
             "args": [],
-            "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
             "MIMode": "gdb",
-            "serverLaunchTimeout": 10000,
-            // "miDebuggerServerAddress": "127.0.0.1:3456",
+            "serverLaunchTimeout": 20000,
+            "miDebuggerServerAddress": "localhost:1111",
+            "debugServerArgs": "localhost:1111 ${command:cmake.launchTargetPath}",
+            "serverStarted":"Listening\\ on\\ port\\ \\d*",
             "miDebuggerPath": "/usr/bin/i686-w64-mingw32-gdb",
-            "miDebuggerArgs": "--eval-command='target remote 127.0.0.1:3456' ${command:cmake.launchTargetPath}",
             "debugServerPath": "/usr/bin/gdbserver",
-            "debugServerArgs": "127.0.0.1:3456 ${command:cmake.launchTargetPath}"
+            "filterStderr":true,
+            "filterStdout":false,
         }
     ]
 }
