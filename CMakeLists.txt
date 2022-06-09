@@ -3,16 +3,11 @@ project(hello)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_SYSTEM_NAME Windows)
-SET(CMAKE_C_FLAGS -m32)
-SET(CMAKE_CXX_FLAGS -m32)
+set(CMAKE_EXE_LINKER_FLAGS "-static")
 
 add_executable(hello.exe
     src/main.cpp)
 
-target_link_libraries(hello.exe PRIVATE
-    -static
-    -gstabs
-    -g
-)
+target_link_libraries(hello.exe PRIVATE)
 
 install(TARGETS hello.exe DESTINATION bin)
