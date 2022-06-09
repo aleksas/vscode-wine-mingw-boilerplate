@@ -1,6 +1,6 @@
 # VSCode MinGW crosscompiled win32 app dev env
 
-Repo contains VSCode dev env wirh Dockerfile to compile and run win32 app using wine.
+Repo contains VSCode dev env with Dockerfile to compile and run win32 app using wine.
 
 # References 
  - [Configure vscode gdbserver launcher](https://github.com/Microsoft/vscode-cpptools/issues/266#issuecomment-259753176)
