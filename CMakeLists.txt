@@ -9,7 +9,6 @@ set(CMAKE_BUILD_WITH_INSTALL_RPATH ON)
 add_executable(hello.exe
     src/main.cpp)
 
-target_link_libraries(hello.exe PRIVATE
-    -gstabs)
+target_link_libraries(hello.exe PRIVATE)
 
 install(TARGETS hello.exe DESTINATION bin)
