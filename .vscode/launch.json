@@ -11,7 +11,7 @@
             "environment": [],
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/i686-w64-mingw32-gdb",
-            "debugServerArgs": "Z:/usr/share/win32/gdbserver.exe localhost:1111 ${command:cmake.launchTargetPath} a a",
+            "debugServerArgs": "Z:/usr/share/win32/gdbserver.exe localhost:1111 ${command:cmake.launchTargetPath} ${command:cmake.launchTargetPath} arg1 arg2",
             "miDebuggerServerAddress": "localhost:1111",
             "serverStarted":"Listening\\ on\\ port\\ \\d*",
             "debugServerPath": "/usr/bin/wine",

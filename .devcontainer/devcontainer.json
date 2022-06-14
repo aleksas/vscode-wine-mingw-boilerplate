@@ -14,7 +14,7 @@
 	"extensions": [
 		"ms-vscode.cpptools-extension-pack",
 		"xaver.clang-format"
-	],
+	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
