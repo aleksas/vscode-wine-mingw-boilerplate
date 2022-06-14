@@ -1,8 +1,8 @@
 # https://github.com/IL2HorusTeam/docker-wine
   
-FROM debian:buster-slim as config
+FROM i386/debian:buster-slim as config
 
-ARG WINEVERSION="5.0"
+ARG WINEVERSION="7.0"
 
 ENV WINEVERSION=$WINEVERSION
 ENV WINEHOME="/home/root"
@@ -49,6 +49,11 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 FROM config as dev
 
 RUN apt update \
-    && apt -y install mingw-w64 mingw-w64-i686-dev mingw-w64-x86-64-dev gdb-mingw-w64 gdb-mingw-w64-target gcc-multilib g++-multilib build-essential git cmake
-
-COPY gdbserver /usr/bin/
+    && apt -y install \
+        mingw-w64 mingw-w64-i686-dev mingw-w64-x86-64-dev gdb-mingw-w64 gdb-mingw-w64-target \
+        gcc-multilib g++-multilib \
+        build-essential git cmake \
+        clang-format ninja-build \
+    && apt purge --auto-remove -y \
+    && apt autoremove --purge -y \
+    && rm -rf /var/lib/apt/lists/*

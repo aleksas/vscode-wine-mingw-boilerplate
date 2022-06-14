@@ -1,6 +1,6 @@
 [
     {
-        "name": "mingw32-posix",
+        "name": "GCC 8.3-posix (i686-w64-mingw32)",
         "compilers": {
             "C": "i686-w64-mingw32-gcc-posix",
             "CXX": "i686-w64-mingw32-g++-posix"

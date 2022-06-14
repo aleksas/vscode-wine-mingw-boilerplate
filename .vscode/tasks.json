@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "pkill gdbserver",
+            "type": "shell",
+            "command": "pkill gdbserver || true",
+            "group": "test",
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            }
+        }
+    ]
+}

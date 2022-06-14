@@ -10,14 +10,22 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "MIMode": "gdb",
-            "serverLaunchTimeout": 20000,
-            "miDebuggerServerAddress": "localhost:1111",
-            "debugServerArgs": "localhost:1111 ${command:cmake.launchTargetPath}",
-            "serverStarted":"Listening\\ on\\ port\\ \\d*",
             "miDebuggerPath": "/usr/bin/i686-w64-mingw32-gdb",
-            "debugServerPath": "/usr/bin/gdbserver",
+            "debugServerArgs": "Z:/usr/share/win32/gdbserver.exe localhost:1111 ${command:cmake.launchTargetPath} a a",
+            "miDebuggerServerAddress": "localhost:1111",
+            "serverStarted":"Listening\\ on\\ port\\ \\d*",
+            "debugServerPath": "/usr/bin/wine",
             "filterStderr":true,
             "filterStdout":false,
+            "logging": {
+                "moduleLoad": true,
+                // "trace": true,
+                // "engineLogging": true,
+                "programOutput": true,
+                "exceptions": true
+            },
+            "preLaunchTask": "pkill gdbserver",
+            "postDebugTask": "pkill gdbserver"
         }
     ]
 }
